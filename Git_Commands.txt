@@ -1,0 +1,12 @@
+git
+
+git checkout -b branchName
+
+When to use -b
+
+git status
+
+git push origin branchName
+
+git merge branchName -- Merge branchName with current branch. 
+
