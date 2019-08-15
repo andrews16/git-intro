@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-Some git commands : 
-
-git
-=======
 Git stuff.
 
 git init
->>>>>>> master
 
 git checkout -b branchName
 
@@ -52,7 +46,28 @@ q stande for quit
 
 You can also cancel by using :q!
 
-4. Pull changes from the parent branch.
+
+4. Pull changes from the parent branch -- This is to avoid merge conflicts when you are trying to pull your branch into the existing one!!
+-> git pull origin someBranch
+- Fetches data AND merges it into your current branch.
+
+git fetch
+Fetching data updates local repositories with online data.
+
+git fetch -a will fetch ALL remote branch data.
+- This is useful when you want to go to someone else's branch.
+git fetch -a
+git checkout my-friends-branch
+-> You don't have to create this branch since it already exists & you just fetched it!
+Sometimes this doesn't work. If you have a local branch with the same name that is not connected to the online branch, use:
+git checkout origin/my-friends-branch
+
+
+
+
+pull = get fetch + get merge
+
+
 4. Push to online URL.
 
 Updating online repository
@@ -63,3 +78,12 @@ GIT - adding files.
 Show how to add just a folder.
 Show how to add all available new files.
 
+Advanced topics:
+- What if it won't let me?
+
+Possible Circumstances: 
+1. Your branch has untracked files.
+Solution: 
+1. Remove untracked files manually
+2. Commit untracked files to a different branch first.
+3. Hard reset branch to your last commit (Git will remove untracked files)
