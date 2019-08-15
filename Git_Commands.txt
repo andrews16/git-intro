@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Some git commands : 
 
 git
+=======
+Git stuff.
+
+git init
+>>>>>>> master
 
 git checkout -b branchName
 
