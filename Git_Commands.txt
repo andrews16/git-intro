@@ -1,4 +1,6 @@
-git
+Git stuff.
+
+git init
 
 git checkout -b branchName
 
