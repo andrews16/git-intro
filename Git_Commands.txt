@@ -10,3 +10,48 @@ git push origin branchName
 
 git merge branchName -- Merge branchName with current branch. 
 
+
+Adding changes to the repository :
+Getting started:
+
+1. Navigate to the branch you plan to start with. 
+git checkout 
+IE: Development branch, a friend's branch, anything.
+
+2. Create a new branch 
+git checkout -b development/clay
+
+3. Edit or create files.
+
+2. Stage them for commit by ADDING the changes.
+specify specific files:
+git add src/filename1.jpg src/filename2.txt
+Specify folders :
+git add src/*
+
+Add all changes:
+git add .
+
+3. Commit changes.
+git commit -m "Message about commit"
+
+What if I forget -m and end up in vim?
+**Take note of this!**
+to exit vim, type :wq
+: takes you out of insert mode.
+w stands for save
+q stande for quit
+
+You can also cancel by using :q!
+
+4. Pull changes from the parent branch.
+4. Push to online URL.
+
+Updating online repository
+
+
+
+GIT - adding files.
+Show how to add just a folder.
+Show how to add all available new files.
+
