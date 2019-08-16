@@ -1,0 +1,30 @@
+[33mcommit d91e5731c8b9e9db3d879e301d1ddec875b605b4[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment/clay[m[33m)[m
+Merge: e5c9a67 e0641ff
+Author: Clay <randyclayandrews@gmail.com>
+Date:   Thu Aug 15 19:48:26 2019 -0400
+
+    Merged with master
+
+[33mcommit e0641ff6a44845e697aba92ac8d7582d503312f9[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Clay <randyclayandrews@gmail.com>
+Date:   Thu Aug 15 19:41:10 2019 -0400
+
+    Git command.txt
+
+[33mcommit e5c9a6770051281a6fafc866bf5a1b46f2a39e45[m
+Author: Clay <randyclayandrews@gmail.com>
+Date:   Thu Aug 15 19:40:29 2019 -0400
+
+    Update
+
+[33mcommit 7f0906100239a9c93e884bb4374451217c1a0a52[m
+Author: Clay <randyclayandrews@gmail.com>
+Date:   Thu Aug 15 19:37:34 2019 -0400
+
+    Update.
+
+[33mcommit 23b720828be19dd110651b8ebc7e234f6a29e359[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Clay <randyclayandrews@gmail.com>
+Date:   Thu Aug 15 19:31:05 2019 -0400
+
+    Initial files
