@@ -78,12 +78,51 @@ GIT - adding files.
 Show how to add just a folder.
 Show how to add all available new files.
 
-Advanced topics:
-- What if it won't let me?
+Undoing changes:
+git checkout -- filename1
+git reset --hard HEAD
+
+git stash
+
+Stash is a handy tool - it allows you to save changes for later and apply them to other branches.
+Useful when you need to quickly switch gears & hop on a different branch.
+
+git stash
+git stash list
+git stash pop
+
+
+
+Troubleshooting
+- I need to take back parts of the last commit!!
+git reset --soft HEAD
+This resets the branch to the origin's state, but stages the changes...
+You can go back and edit them this way.
+
+git reset --hard HEAD will get rid of and remove your last commit.
+
+
+
+- Untracked files are causing merge problems! 
+I dont want to delete them all manually!
+
+The clean command will remove untracked files.
+For an interactive procedure, use : 
+git clean -i
+
+To just get rid of untracked files, use:
+git clean -f
+to force-delete the files.
+
 
 Possible Circumstances: 
-1. Your branch has untracked files.
+** Your branch has untracked files! 
+Git stash isn't working because the files aren't tracked, so git can't stash them.
 Solution: 
 1. Remove untracked files manually
 2. Commit untracked files to a different branch first.
 3. Hard reset branch to your last commit (Git will remove untracked files)
+    git reset --hard HEAD
+
+    -- What won't always work : 
+    git stash might not always work in this situation.
