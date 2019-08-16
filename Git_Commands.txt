@@ -45,9 +45,12 @@ w stands for save
 q stande for quit
 
 You can also cancel by using :q!
+This will force quit the command line editor and NOT commit the changes.
 
 
-4. Pull changes from the parent branch -- This is to avoid merge conflicts when you are trying to pull your branch into the existing one!!
+4. Pull or merge changes on the parent branch.
+-- Always do this before trying to pull your changes into the team's branch.
+
 -> git pull origin someBranch
 - Fetches data AND merges it into your current branch.
 
@@ -61,6 +64,10 @@ git checkout my-friends-branch
 -> You don't have to create this branch since it already exists & you just fetched it!
 Sometimes this doesn't work. If you have a local branch with the same name that is not connected to the online branch, use:
 git checkout origin/my-friends-branch
+
+To use merge : 
+git checkout development
+git pull
 
 
 
@@ -94,7 +101,7 @@ git stash pop
 
 
 Troubleshooting
-- I need to take back parts of the last commit!!
+- I added staged files I don't need!
 git reset --soft HEAD
 This resets the branch to the origin's state, but stages the changes...
 You can go back and edit them this way.
