@@ -1,17 +1,127 @@
-Git stuff.
+Git : 
+
+Quick guide:
+
+git init			
+    - Initializes directory as git
+git checkout -b branchName
+    - Create new branch(-b) and switch to it (checkout)
+git checkout branchName
+     - Switch to branch
+git checkout targetBranch -- fileName
+     - Get changes on fileName from targetBranch
+git status
+     - Display if/what changes have been made to dir since last commit
+
+git add fileName.ext
+      - Stages fileName.ext changes for commit
+git add .
+     - Stage all changesfor commit 
+git add folder/*
+     - Stage all changes in folder for commit
+
+git commit -m 'message'		- Updates git branch locally
+
+git push origin branchName	- Publish branch
+
+git merge branchName		- merge branchName w/ current branch
+
+				- master as branchName updates branch w/ new master
+
+				- IN master, use branchName to update local master
+
+git remote add origin [url]	- Tell where git dir should be located online
+
+git push origin master		- push master from local to online
+
+git pull			- Pulls master file from online to local when
+
+				  you're in your master branch
+
+
 
 git init
+Git is a version control system.
+As files are added and modified, git keeps track of all the changes that occur between "commits". This way, teams can track the development of the code -- keeping the desired changes, and removing other changes if they cause problems.
+Starting from one working version of the code - typically a 'master' or 'production' branch -  Developers may create a new branch and build changes to their own isolated version of the code. Once a stage or feature is complete, the new branch can be merged with the main codebase. This allows multiple people and teams to independantly work on features without breaking the code for others during development.
 
-git checkout -b branchName
+** This guide provides information on the basics of using git. This guide will not solve all git-related problems, but hopefully will provide enough information so that you where where to start when researching further questions.
 
-When to use -b
+1. Getting started : 
+- First, download Git Bash. All default settings are fine. If you are on Windows and have experience working with Linux, feel free to include the Unix commands package during install.
+- On Git Bash, set up your online repository credentials. Some companies will set this up automatically; You can usually skip this step when working on an imaged operating system or your company manages your software.
 
-git status
+ ** IF your credentials are not automatically set up **
+        git config credential.helper store
 
-git push origin branchName
+- this will store your username and password globally.
 
-git merge branchName -- Merge branchName with current branch. 
+== Creating your own git repository :
+- Navigate to a folder in which you would like a repository. Then initialize the repository:
 
+        git init
+
+- Git can be used both locally and connected to an onlien repository. To connect to an online repository, use:
+
+       git add remote <remote name> <remote URL>
+
+EXAMPLE:
+     git add remote origin http://github.com/example/project.git
+
+- Remote names are typically "origin". From here forward, this guide will always use "origin" to refer to the online repository.
+
+=== Linking to an existing git repository:
+- Go to the folder in which your projects are stored
+
+        git clone <URL>
+
+ This will create a new folder to hold your cloned git repository.
+
+
+=== Branches
+- Branches are different timelines of commit history. 'Master', 'release', and 'production' branches are typically reserved for production-ready code. Only merge code that is working and tested to these branches. 
+- To create a new branch and NOT switch on to it, use:
+
+     git branch <branchName>
+Example : git branch development/tom
+
+- To create a new branch and automatically be "in" the branch:
+    git checkout -b <branchName>
+- New branches are created from the timeline of the branch you are in. For example, if you know the branch "release/2019.08.20"  contains only stable code, you might want to branch off from that. 
+To switch between branches:
+
+    git checkout <branchName>
+
+Example of creating and switching to a new branch called 'development/tom' using the commit history in 'release/2019.08.20':
+
+    git checkout release/2019.08.20
+    git checkout -b development/tom
+
+=== Getting code from online:
+git fetch
+- 'fetch' will ask the online repository for all changes the local repo does not have. 
+- Specify 'origin' if remote tracking is not already established.
+git fetch origin
+
+git merge
+git pull
+
+=== Committing Changes
+Adding code to an online repository has 5 basic steps:
+1. Update the code.
+2. Stage changes
+           git add <fileName>
+3. Commit Changes
+           git commit -m "Commit message"
+4. Push local commits to online repository
+           git push origin my-branch
+5. Merge development branch into production
+           (Typically on online GUI)
+           git checkout production
+           git merge my-branch
+           git push origin production
+
+1. Updating the code:
 
 Adding changes to the repository :
 Getting started:
